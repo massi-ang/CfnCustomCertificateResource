@@ -1,0 +1,68 @@
+{
+    "typeName": "AWSSamples::Iot::Certificate",
+    "description": "A resource to create Certificate and Keys for IoT Things",
+    "properties": {
+        "Bucket": {
+            "description": "The S3 bucket name where to write the certificate",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_\\-]{0,64}$",
+            "maxLength": 64
+        },
+        "Arn": {
+            "description": "The Arn of this certificate",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9:_\\-]{0,64}$",
+            "maxLength": 64
+        },
+        "Id": {
+            "description": "The Id of this certificate",
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9_\\-]{0,64}$",
+            "maxLength": 64
+        },
+        "Status": {
+            "description": "The status of the certificate",
+            "type": "string",
+            "enum": ["ACTIVE","INACTIVE"]
+        }
+    },
+    "required": [
+        "Bucket"
+    ],
+    "readOnlyProperties": [
+        "/properties/Arn",
+        "/properties/Id"
+    ],
+    "primaryIdentifier": [
+        "/properties/Id" 
+    ],
+    "additionalProperties": false,
+    "handlers": {
+        "create": {
+            "permissions": [
+                "iot:CreateKeysAndCertificate",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "iot:UpdateCertificate"
+            ]
+        },
+        "read": {
+            "permissions": [
+                "iot:ListCertificates", 
+                "iot:DescribeCertificate"   
+            ]
+        },
+        "update": {
+            "permissions": [
+                "iot:UpdateCertificate"
+            ]
+        },
+        "delete": {
+            "permissions": [
+                "iot:DeleteCertificate",
+                "s3:DeleteObject"
+            ]
+        }
+
+    }
+}
