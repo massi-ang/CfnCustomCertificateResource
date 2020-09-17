@@ -1,13 +1,21 @@
 # AWSSamples::Iot::Certificate
 
-Congratulations on starting development!
+A custom resource type to create AWS IoT Certificates and a CDK construct to use it.
 
-Next steps:
+## Prerequisite
 
-1. Populate the JSON schema describing your resource, `awssamples-iot-certificate.json`
-2. The RPDK will automatically generate the correct resource model from the
-   schema whenever the project is built via Make.
-   You can also do this manually with the following command: `cfn-cli generate`
-3. Implement your resource handlers by adding code to provision your resources in your resource handler's methods.
+* [Golang](https://golang.org/)
+* [cfn CLI](https://github.com/aws-cloudformation/cloudformation-cli)
 
-Please don't modify files `model.go and main.go`, as they will be automatically overwritten.
+## Adding the resource
+
+To add the resource to your account, first clone this repository then:
+
+```
+make build
+cfn submit
+```
+
+## Using the resource
+
+Refer to the [docs](./docs/README.md)

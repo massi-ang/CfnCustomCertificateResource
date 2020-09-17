@@ -1,5 +1,5 @@
 {
-    "typeName": "AWSSamples::Iot::Certificate",
+    "typeName": "AWSLabs::Iot::Certificate",
     "description": "A resource to create Certificate and Keys for IoT Things",
     "properties": {
         "Bucket": {

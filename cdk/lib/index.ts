@@ -4,7 +4,7 @@ import { countReset } from 'console';
 
 export enum CertificateStatus {
   ACTIVE = "ACTIVE",
-  INACITVE = "INACTIVE"
+  INACTIVE = "INACTIVE"
 }
 export interface IotCertificateProps {
   /**
@@ -24,7 +24,7 @@ export class IotCertificate extends cdk.Construct {
    * 
    */
   public readonly certificateArn: string;
-  /** @returnsthe Id of the certificate
+  /** @returns the Id of the certificate
    * 
    */
   public readonly certificateId: string;
