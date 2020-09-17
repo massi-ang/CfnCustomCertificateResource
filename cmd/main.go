@@ -18,7 +18,6 @@ changes will be undone by the next 'cfn generate' command.
 // Handler is a container for the CRUDL actions exported by resources
 type Handler struct{}
 
-
 // Create wraps the related Create function exposed by the resource code
 func (r *Handler) Create(req handler.Request) handler.ProgressEvent {
 	return wrap(req, resource.Create)
