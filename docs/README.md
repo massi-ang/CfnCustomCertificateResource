@@ -1,4 +1,4 @@
-# AWSLabs::Iot::Certificate
+# Mirai::Iot::Certificate
 
 A resource to create Certificate and Keys for IoT Things
 
@@ -10,7 +10,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 
 <pre>
 {
-    "Type" : "AWSLabs::Iot::Certificate",
+    "Type" : "Mirai::Iot::Certificate",
     "Properties" : {
         "<a href="#bucket" title="Bucket">Bucket</a>" : <i>String</i>,
         "<a href="#status" title="Status">Status</a>" : <i>String</i>
@@ -21,7 +21,7 @@ To declare this entity in your AWS CloudFormation template, use the following sy
 ### YAML
 
 <pre>
-Type: AWSLabs::Iot::Certificate
+Type: Mirai::Iot::Certificate
 Properties:
     <a href="#bucket" title="Bucket">Bucket</a>: <i>String</i>
     <a href="#status" title="Status">Status</a>: <i>String</i>

@@ -1,5 +1,5 @@
 {
-    "typeName": "AWSLabs::Iot::Certificate",
+    "typeName": "Mirai::Iot::Certificate",
     "description": "A resource to create Certificate and Keys for IoT Things",
     "properties": {
         "Bucket": {

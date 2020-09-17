@@ -1,5 +1,5 @@
 {
-    "typeName": "AWSLabs::Iot::Certificate",
+    "typeName": "Mirai::Iot::Certificate",
     "language": "go",
     "runtime": "go1.x",
     "entrypoint": "handler",
